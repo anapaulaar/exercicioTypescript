@@ -1,6 +1,7 @@
 export interface IEscolas {
   nome: string,
   serie: string,
+  periodo: string,
   vagas: number,
   cnpj: number
 }

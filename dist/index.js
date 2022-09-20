@@ -1,10 +1,12 @@
 "use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const Enums_1 = require("./Enums");
 const CadastrarEscolas = require('./Escolas');
 const CadastrarAlunos = require('./Alunos');
 const addEscola = new CadastrarEscolas();
 const addAluno = new CadastrarAlunos();
-addEscola.createEscola('eloi', '4º ano', 8, 290908098000102);
-addEscola.createEscola('ceduc', '3º ano', 33, 345098765000103);
+addEscola.createEscola('eloi', Enums_1.Series.primeiroAno, Enums_1.Periodos.manha, 8, 290908098000102);
+addEscola.createEscola('ceduc', Enums_1.Series.terceiroAno, Enums_1.Periodos.tarde, 33, 345098765000103);
 console.log(addEscola.list);
 addAluno.cadastraAluno('ana', 9, 'ana@ana.com', 'feminino');
 addAluno.cadastraAluno('paula', 8, 'paula@paula.com', 'feminino');
