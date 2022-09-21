@@ -1,10 +1,10 @@
-export enum Periodos {
+export enum EPeriodos {
   manha = 'Manhã',
   tarde = 'Tarde',
   noite = 'Noite'
 }
 
-export enum Series {
+export enum ESeries {
   primeiroAno = '1º Ano',
   segundoAno = '2 º Ano',
   terceiroAno = '3º Ano',
