@@ -19,7 +19,7 @@ export class Escolas {
     return serie
   }
 
-  relatorioEscola ():void {
+  relatorioEscola () {
     console.log('Escola: ' + this.nome, 'CNPJ: ' + this.cnpj)
     this.series.forEach(serie => {
       console.log(serie)
@@ -34,5 +34,14 @@ export class Escolas {
       selecionaSerie.relacaoSeries()
       return
     }
+  }
+
+  relatorioTotalVagas () {
+    let vagas:number = 0
+    this.series.forEach(serie => {
+      vagas = vagas + serie.vagas - serie.alunos.length
+    })
+    console.log({escola: this.nome, vagasDisponiveis:vagas})
+    return vagas
   }
 }

@@ -12,7 +12,7 @@ class Serie {
         }
     }
     relacaoSeries() {
-        console.log({ nome: this.series, periodo: this.periodo, totalVagas: this.vagas - this.alunos.length, alunos: this.alunos });
+        console.log({ nome: this.series, periodo: this.periodo, alunos: this.alunos, totalVagas: this.vagas - this.alunos.length });
     }
 }
 exports.Serie = Serie;

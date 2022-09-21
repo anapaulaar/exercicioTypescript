@@ -52,12 +52,8 @@ export class Matriculas {
     return escola
   }
 
-  relatorioTotalVagas () {
-    let vagas:number = 0
-    this.series.forEach(serie => {
-      vagas = vagas + serie.vagas - serie.alunos.length
-    })
-    console.log({vagasDisponiveis:vagas})
-    return vagas
+  relacaoTotalVagas (escola: Escolas) {
+    escola.relatorioTotalVagas()
+    return escola
   }
 }

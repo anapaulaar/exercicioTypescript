@@ -40,13 +40,9 @@ class Matriculas {
         escola.relatorioSeries(serie);
         return escola;
     }
-    relatorioTotalVagas() {
-        let vagas = 0;
-        this.series.forEach(serie => {
-            vagas = vagas + serie.vagas - serie.alunos.length;
-        });
-        console.log({ vagasDisponiveis: vagas });
-        return vagas;
+    relacaoTotalVagas(escola) {
+        escola.relatorioTotalVagas();
+        return escola;
     }
 }
 exports.Matriculas = Matriculas;

@@ -26,5 +26,13 @@ class Escolas {
             return;
         }
     }
+    relatorioTotalVagas() {
+        let vagas = 0;
+        this.series.forEach(serie => {
+            vagas = vagas + serie.vagas - serie.alunos.length;
+        });
+        console.log({ escola: this.nome, vagasDisponiveis: vagas });
+        return vagas;
+    }
 }
 exports.Escolas = Escolas;
